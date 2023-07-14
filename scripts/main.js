@@ -40,3 +40,9 @@ const teamMembers = [
 ];
 
 console.log(teamMembers);
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+    console.log(teamMembers[i]);
+
+}
