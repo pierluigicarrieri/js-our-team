@@ -53,10 +53,13 @@ for (let i = 0; i < teamMembers.length; i++) {
 
 }
 
+/*"For" cycle creates "teamMember" variable for each object, then adds 
+to "cardContainer" the html "col" element with a card, with each "teamMember" 
+properties in the right card place*/
 for (let i = 0; i < teamMembers.length; i++) {
 
     const teamMember = teamMembers[i];
 
-    cardContainer.innerHTML += `<div class="card" style="width: 18rem;"><img src="/img/${teamMember.profilePic}" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${teamMember.firstName} ${teamMember.lastName}</h5><p class="card-text">${teamMember.position}</p></div></div>`
+    cardContainer.innerHTML += `<div class="col-4"><div class="card" style="flex-basis: calc(100%/3)"><img src="/img/${teamMember.profilePic}" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${teamMember.firstName} ${teamMember.lastName}</h5><p class="card-text">${teamMember.position}</p></div></div></div>`
 
 }
