@@ -1,5 +1,9 @@
 "use strict"
 
+//Variable for html card container
+const cardContainer = document.getElementById("card_container");
+
+//Array of objects, each object is a member of the team.
 const teamMembers = [
     {
         firstName : "Wayne",
@@ -39,10 +43,20 @@ const teamMembers = [
     },
 ];
 
+//Views "teamMembers"
 console.log(teamMembers);
 
+//"For" cycle views each object/member of the team
 for (let i = 0; i < teamMembers.length; i++) {
 
     console.log(teamMembers[i]);
+
+}
+
+for (let i = 0; i < teamMembers.length; i++) {
+
+    const teamMember = teamMembers[i];
+
+    cardContainer.innerHTML += `<div class="card" style="width: 18rem;"><img src="/img/${teamMember.profilePic}" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">${teamMember.firstName} ${teamMember.lastName}</h5><p class="card-text">${teamMember.position}</p></div></div>`
 
 }
