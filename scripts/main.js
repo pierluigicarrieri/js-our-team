@@ -39,4 +39,4 @@ const teamMembers = [
     },
 ];
 
-console.log(teamMembers)
+console.log(teamMembers);
